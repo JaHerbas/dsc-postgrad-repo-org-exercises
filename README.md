@@ -7,29 +7,40 @@
 To align the messy repo with industry expectations you will:
 
 - Use Github to change the name of the directory to something meaningful
-- Use git through terminal to:
-  - Create a `gitignore` file in terminal
+- Use the terminal to:
+  - Create a `gitignore` file
   - Remove unnecessary files
   - Create a folder for images
   - Move image files to the new folder
-  - Rename indiviudal files to more  descriptive names
+  - Rename indiviudal files to more descriptive names
 
 #### Fork and Clone
-To follow along with these steps and replicate locally, first fork [this repository] and clone to your local machine.
+To follow along with these steps and replicate locally, first fork [this repository](https://github.com/learn-co-curriculum/dsc-postgrad_Project-Repository) and clone to your local machine.
 
 #### Change repository name
 A repository name should be informative about its contents. Which repository name tells more to employers?
 
-- example one
-- example two
-[Lindsey, update the above]
+- `Project Repository`
+- `House Price Prediction`
 
-There are two ways to change the name of a github repository. It [can be done through the terminal and through github online.](https://help.github.com/en/github/administering-a-repository/renaming-a-repository).
+There are two ways to change the name of a github repository. It can be done [through the terminal or through GitHub on the repository website](https://help.github.com/en/github/administering-a-repository/renaming-a-repository).
 
-This example shows using the github repository website. 
+This example shows using the repository on GitHub:
 
-[Lindsey - add pic like in the link above, but with our updated directory name]
+![changing repository name](images/change-repo-name.png)
 
+- go to the Settings tab of the GitHub repository for your project
+- change the name to something more descriptive and click `Rename`
+
+Note! This will change the URL for your repository. You will need to update the URL everywhere it's located - for example, do you link the repository for this project directly in your resume?
+
+This also affects the local repository you have, where you will be making further changes. While Git and GitHub are smart enough to know when a repository has moved, you may get an warning when you try to push to the old URL that says:
+
+![remote url repository moved warning](images/warning-repository-moved.png)
+
+You can check the remote repository URL in your terminal by navigating to the repository locally, then running `git remote -v`. 
+
+You can update the remote repository URL in your terminal by then running `git remote set-url origin <new repo url>`.
 
 #### `gitignore`
 The [`gitignore`](https://git-scm.com/docs/gitignore) file tells git which files to "ignore" and not track. Each line in a `gitignore` list the string pattern in your directories that git should not track. Many hidden system files, caches, and output directories do not need to be tracked for a project or would cause problems on another person's system if they were to clone and pull your system files to their computer. 
