@@ -38,12 +38,13 @@ This also affects the local repository you have, where you will be making furthe
 
 You can check the remote repository URL in your terminal by navigating to the repository locally, then running 
 
-> `git remote -v`
+`git remote -v`
 
 You can update the remote repository URL in your terminal by then running
 
 Syntax:
-> `git remote set-url origin <new repo url>`
+
+`git remote set-url origin <new repo url>`
 
 #### `gitignore`
 The [`gitignore`](https://git-scm.com/docs/gitignore) file tells Git which files to "ignore" and not track. Each line in a `gitignore` list the string pattern in your directories that Git should not track. Many hidden system files, caches, and output directories do not need to be tracked for a project or could cause problems on another person's system if they were to clone and pull your system files to their computer. 
@@ -52,14 +53,15 @@ GitHub provides [many sample `gitignore` templates](https://github.com/github/gi
 
 **Create `gitignore` file**
 - Navigate to your local project repository in the terminal
-- > `touch .gitignore` 
+- `touch .gitignore` 
+  - This command creates a new file called .gitignore
 
 **Copy template**
 - Copy content from [GitHub's Python gitignore template](https://github.com/github/gitignore/blob/master/Python.gitignore) 
 
 **Add content to `gitignore`**
 
-- > `open .gitignore`
+- `open .gitignore`
   - This command should open the `gitignore` file for editing using some default text editor - feel free to use whichever text editor you prefer (VSCode, vim, etc.)
 
 - Paste content into the `gitignore` file
@@ -84,7 +86,8 @@ For this exercise, you will follow how the datafile is removed using [`git rm`](
 Please make sure you have local copies of all datasets before removing them!
 
 Syntax:
-> `git rm <filename>`
+
+`git rm <filename>`
 
 Example:
 > `git rm .DS_Store`
@@ -95,7 +98,8 @@ Note! It is easier to avoid accidental commits than it is to remove something fr
 The top level of the repository directory needs to uncluttered and direct employers to what they need to see. All files are on the same level in the messy repository example. The image files, while important to our notebook, are merely clutter to a future employer. Creating subdirectories to store non-priority files will solve this problem. Use `mkdir` to create a new folder within your directory. Note: the folder will not show up in the remote repository until files are **in** the folder.
 
 Syntax:
-> `mkdir <foldername>`
+
+`mkdir <foldername>`
 
 Example:
 > `mkdir images`
@@ -104,7 +108,8 @@ Example:
 [`git mv`](https://git-scm.com/docs/git-mv) is another command that both physically moves a file **and** updates the index within the git file in one step. 
 
 Syntax:
-> `git mv <oldlocation\filename> <newlocation\filename>`
+
+`git mv <oldlocation\filename> <newlocation\filename>`
 
 Example:
 > 
@@ -114,7 +119,8 @@ Example:
 All file names should be informative. `git mv` can also be used to rename files!
 
 Syntax:
-> `git mv <oldfilename> <newfilename>`
+
+`git mv <oldfilename> <newfilename>`
 
 Example:
 > 
