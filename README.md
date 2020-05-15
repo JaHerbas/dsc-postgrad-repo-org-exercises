@@ -18,10 +18,12 @@ To align the messy repo with industry expectations you will:
 To follow along with these steps and replicate locally, first fork [this repository](https://github.com/learn-co-curriculum/dsc-postgrad_Project-Repository) and clone to your local machine.
 
 #### Change repository name
-A repository name should be informative about its contents. Which repository name tells more to employers?
+A repository name should be informative about its contents. Which repository name tells more to potential employers?
 
-- `Project Repository`
-- `House Price Prediction`
+- Project Repository
+- House Price Prediction
+
+The latter is much more descriptive!
 
 There are two ways to change the name of a github repository. It can be done [through the terminal or through GitHub on the repository website](https://help.github.com/en/github/administering-a-repository/renaming-a-repository).
 
