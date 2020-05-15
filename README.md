@@ -10,11 +10,10 @@ To align the messy repo with industry expectations you will:
 - Use the terminal to:
   - Create a `gitignore` file
   - Remove unnecessary files
-  - Create a folder for images
-  - Move image files to the new folder
+  - Move image files into a new `images` folder
   - Rename individual files to have more descriptive names
 
-#### Fork and Clone
+### Fork and Clone
 To follow along with these steps and replicate locally, first fork [this repository](https://github.com/learn-co-curriculum/dsc-postgrad_Project-Repository) and clone to your local machine.
 
 ### Change repository name
@@ -81,11 +80,11 @@ Example:
 Once you've added a `gitignore` to your repository, you can add/commit/push your changes to see how this affects both your local and remote repositories.
 
 ### Remove unnecessary files
-While tracking the steps you take to transform and clean data before modeling is important, GitHub is not the place to store those datasets. [GitHub has a firm limit on file size](https://help.github.com/en/github/managing-large-files/conditions-for-large-files) and it [takes extra work to remove large files](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history) from a repository if you commit them by mistake. It is best to  store your data locally, and add your data folder (or specific data file types) to your `.gitignore` file.
+While tracking the steps you take to transform and clean data before modeling is important, GitHub is not the place to store those datasets. [GitHub has a firm limit on file size](https://help.github.com/en/github/managing-large-files/conditions-for-large-files) and it [takes extra work to remove large files](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history) from a repository if you commit them by mistake. It is best to store your data locally, and add your data folder (or specific data file types) to your `.gitignore` file.
 
-For this exercise, you will follow how the datafile is removed using [`git rm`](https://git-scm.com/docs/git-rm). `git rm` will remove a file both from the local directory **and** from your repository when you push. If you only use a `del` or ` rm` locally without using `git rm`, the file will still be stored remotely and be downloaded again with future `pull` commands.
+For this exercise, you can remove the data file and other unnecessary files from the example repository using [`git rm`](https://git-scm.com/docs/git-rm). `git rm` will remove a file both from the local directory **and** from your repository when you push. If you only use a `del` or ` rm` locally without using `git rm`, the file will still be stored remotely and be downloaded again with future `pull` commands.
 
-Please make sure you have local copies of all datasets before removing them!
+**Please make sure you have local copies of all datasets before removing them!**
 
 Syntax:
 
@@ -94,10 +93,18 @@ Syntax:
 Example:
 > `git rm .DS_Store`
 
+For the purposes of the example messy repository, please remove the data file, `train.csv`, the `.DS_Store` file, and the `.ipynb_checkpoints` folder. If you get an error regarding removing the `.ipynb_checkpoints` folder, read it carefully - adding `-r` to the `git rm` command (so: `git rm -r .ipynb_checkpoints`) will remove the directory properly.
+
 Note! It is easier to avoid accidental commits than it is to remove something from an accidental commit. Check out GitHub's guidelines [here](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository#avoiding-accidental-commits-in-the-future), and especially remember to stage and commit files individually instead of using catch-all commands!
 
-### Create images folder
-The top level of the repository directory needs to uncluttered and direct employers to what they need to see. All files are on the same level in the messy repository example. The image files, while important to our notebook, are merely clutter to a future employer. Creating subdirectories to store non-priority files will solve this problem. Use `mkdir` to create a new folder within your directory. Note: the folder will not show up in the remote repository until files are **in** the folder.
+### Move images into an image folder
+The top level of the repository directory needs to uncluttered and direct employers to what they need to see. All files are on the same level in the messy repository example. The image files, while important to our notebook, are merely clutter to a future employer. 
+
+**Create `image` folder**
+
+Creating subdirectories to store non-priority files will solve this problem. Use `mkdir` to create a new folder within your directory.
+
+Note: the folder will not show up in the remote repository until files are **in** the folder.
 
 Syntax:
 
@@ -106,28 +113,39 @@ Syntax:
 Example:
 > `mkdir images`
 
-### Move image files
-[`git mv`](https://git-scm.com/docs/git-mv) is another command that both physically moves a file **and** updates the index within the git file in one step. 
+**Move image files**
+
+[`git mv`](https://git-scm.com/docs/git-mv) is another command, like `git rm`, that both physically makes a change within a directory **and** updates the index within the Git file in one step. 
+
+Note: when you move images or other files referenced elsewhere in your repository, for example images that are shown in your README, you will need to change the image path to reflect the new location! Also, you need to include the filetypes as they are considered part of the file name.
 
 Syntax:
 
-`git mv <oldlocation\filename> <newlocation\filename>`
+`git mv <oldlocation/filename> <newlocation/filename>`
 
 Example:
-> 
+> `git mv for-sale-header.jpg images/for-sale-header.jpg`
 
 ### Update file names
 
-All file names should be informative. `git mv` can also be used to rename files!
+All file names should be informative. `git mv` can also be used to rename files! Essentially, you're telling Git to move the file from its old name to its new name.
+
+Note! You still need to include the filetypes as they are considered part of the file name.
 
 Syntax:
 
 `git mv <oldfilename> <newfilename>`
 
 Example:
-> 
+> `git mv Project_Notebook.ipynb EDA-Modeling-Evaluation.ipynb`
 
-To recap, we used the following code for these changes:
+## Summary
 
-[insert image of whole terminal process here]
+In the end, your repository should look like this:
+
+![polished repository example](images/PolishedRepo.png)
+
+To recap, we used the following terminal commands for these changes:
+
+![image showcasing the whole terminal process](images/all-terminal-commands.png)
 
