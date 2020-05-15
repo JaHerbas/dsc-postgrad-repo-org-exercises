@@ -12,7 +12,7 @@ To align the messy repo with industry expectations you will:
   - Remove unnecessary files
   - Create a folder for images
   - Move image files to the new folder
-  - Rename indiviudal files to more descriptive names
+  - Rename individual files to have more descriptive names
 
 #### Fork and Clone
 To follow along with these steps and replicate locally, first fork [this repository](https://github.com/learn-co-curriculum/dsc-postgrad_Project-Repository) and clone to your local machine.
@@ -34,74 +34,92 @@ This example shows using the repository on GitHub:
 
 Note! This will change the URL for your repository. You will need to update the URL everywhere it's located - for example, do you link the repository for this project directly in your resume?
 
-This also affects the local repository you have, where you will be making further changes. While Git and GitHub are smart enough to know when a repository has moved, you may get an warning when you try to push to the old URL that says:
+This also affects the local repository you have, where you will be making further changes. While Git and GitHub are smart enough to know when a repository has moved, you may get an warning when you try to push to the old URL that says you should use the new location.
 
-![remote url repository moved warning](images/warning-repository-moved.png)
+You can check the remote repository URL in your terminal by navigating to the repository locally, then running 
 
-You can check the remote repository URL in your terminal by navigating to the repository locally, then running `git remote -v`. 
+> `git remote -v`
 
-You can update the remote repository URL in your terminal by then running `git remote set-url origin <new repo url>`.
+You can update the remote repository URL in your terminal by then running
+
+Syntax:
+> `git remote set-url origin <new repo url>`
 
 #### `gitignore`
-The [`gitignore`](https://git-scm.com/docs/gitignore) file tells git which files to "ignore" and not track. Each line in a `gitignore` list the string pattern in your directories that git should not track. Many hidden system files, caches, and output directories do not need to be tracked for a project or would cause problems on another person's system if they were to clone and pull your system files to their computer. 
+The [`gitignore`](https://git-scm.com/docs/gitignore) file tells Git which files to "ignore" and not track. Each line in a `gitignore` list the string pattern in your directories that Git should not track. Many hidden system files, caches, and output directories do not need to be tracked for a project or could cause problems on another person's system if they were to clone and pull your system files to their computer. 
 
-Github provides [many sample `gitignore` templates](https://github.com/github/gitignore) based on the languages or tools of your project. The [python `gitignore`](https://github.com/github/gitignore/blob/master/Python.gitignore) is the best choice for most Flatiron School data science projects. If a specific file or directory type is not listed in a `gitignore` template it is not a problem. `gitignore` files can be updated through vim in terminal or edited on github. The steps below walk through creating a `gitignore` file from scratch, using the python `gitignore` template, and adding specifications to the file. 
+GitHub provides [many sample `gitignore` templates](https://github.com/github/gitignore) based on the languages or tools of your project. GitHub's [Python `gitignore`](https://github.com/github/gitignore/blob/master/Python.gitignore) template is the best choice for most Flatiron School data science projects. If a specific file or directory type is not listed in a `gitignore` template it is not a problem - for example, if you are using a Mac, you may want to add the `.DS_Store` hidden file (which tracks folder attributes for your local directory) to your `gitignore`. `gitignore` files can be updated through any text editor or edited on GitHub. The steps below walk through creating a `gitignore` file from scratch, using the Python `gitignore` template, and adding specifications to the file. 
 
 **Create `gitignore` file**
-- touch .gitignore
+- Navigate to your local project repository in the terminal
+- > `touch .gitignore` 
 
-**Get template**
-- go to [link of python gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) file and copy content
+**Copy template**
+- Copy content from [GitHub's Python gitignore template](https://github.com/github/gitignore/blob/master/Python.gitignore) 
 
 **Add content to `gitignore`**
-- vim .gitignore
-- i
-- paste file content
 
-**Tell git to ignore more files**
-- add `.DS_Store/` and  `.ipynb_checkpoints` to gitignore
-- esc
-- :wq
+- > `open .gitignore`
+  - This command should open the `gitignore` file for editing using some default text editor - feel free to use whichever text editor you prefer (VSCode, vim, etc.)
 
-**Save changes**
-- git add/commit/push
+- Paste content into the `gitignore` file
+
+**Tell Git to ignore more files/directories**
+- Adding more lines, without comment hashes ('#'), will have Git ignore those files/directories
+- Examples of more files/directories you may want Git to ignore include:
+  - `.DS_Store` (for Mac users)
+  - Data folder (so you don't accidentally commit data that is too large for GitHub)
+  - `.py` files containing API keys
+
+Example:
+![screenshot of a gitignore](images/example-gitignore.png)
+
+Once you've added a `gitignore` to your repository, you can add/commit/push your changes to see how this affects both your local and remote repositories.
 
 #### Remove unnecessary files
-While tracking data transformation and cleaning before modeling is important, Github is not the place to store those datasets. [Github has a firm limit on file size](https://help.github.com/en/github/managing-large-files/conditions-for-large-files) and it [takes extra work to remove large files](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history) from a repository if you commit them by mistake. It is best to either store your data locally and add `csv`, `json`, and such file types to your `.gitignore` file.
+While tracking the steps you take to transform and clean data before modeling is important, GitHub is not the place to store those datasets. [GitHub has a firm limit on file size](https://help.github.com/en/github/managing-large-files/conditions-for-large-files) and it [takes extra work to remove large files](https://help.github.com/en/github/managing-large-files/removing-files-from-a-repositorys-history) from a repository if you commit them by mistake. It is best to  store your data locally, and add your data folder (or specific data file types) to your `.gitignore` file.
 
-For this exercise, you will follow how the datafile is removed using [`git rm`](https://git-scm.com/docs/git-rm). `git rm` will remove a file both from the local directory **and** from your repository when you push. If you only use a `delete` or ` rm` locally without using `git rm`, the file will still be stored remotely and be downloaded again with future `pull` commands.
+For this exercise, you will follow how the datafile is removed using [`git rm`](https://git-scm.com/docs/git-rm). `git rm` will remove a file both from the local directory **and** from your repository when you push. If you only use a `del` or ` rm` locally without using `git rm`, the file will still be stored remotely and be downloaded again with future `pull` commands.
 
-- `git rm filename`
-- git add/commit/push
+Please make sure you have local copies of all datasets before removing them!
+
+Syntax:
+> `git rm <filename>`
+
+Example:
+> `git rm .DS_Store`
+
+Note! It is easier to avoid accidental commits than it is to remove something from an accidental commit. Check out GitHub's guidelines [here](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository#avoiding-accidental-commits-in-the-future), and especially remember to stage and commit files individually instead of using catch-all commands!
 
 #### Images folder
-The top level of the repository directory needs to uncluttered and direct employers to what they need to see. All files are on the same level in the messy repository example. The image files, while important to our notebook, are merely clutter to a future employer. Creating subdirectories to store non-priority files will solve this problem. Use `mkdir` to create a new folder within your directory. But **note**, the folder will not show up in the remote repository until files are **in** the folder.
+The top level of the repository directory needs to uncluttered and direct employers to what they need to see. All files are on the same level in the messy repository example. The image files, while important to our notebook, are merely clutter to a future employer. Creating subdirectories to store non-priority files will solve this problem. Use `mkdir` to create a new folder within your directory. Note: the folder will not show up in the remote repository until files are **in** the folder.
 
-- `mkdir images`
+Syntax:
+> `mkdir <foldername>`
 
+Example:
+> `mkdir images`
 
 #### Move image files
-[`git mv`](https://git-scm.com/docs/git-mv) is another command that both physically moves a file **and** updates the index within the git file in one step. The syntax of the `git mv` is:
+[`git mv`](https://git-scm.com/docs/git-mv) is another command that both physically moves a file **and** updates the index within the git file in one step. 
 
-`git mv oldlocation\filename  newlocation\filename`
+Syntax:
+> `git mv <oldlocation\filename> <newlocation\filename>`
 
-So in this example, the following code will move the image files to the newly created directory:
-[Lindsey work here]
-- `git mv`
+Example:
+> 
 
 #### Update file names
 
-The file names should also be informative. `git mv` can also be used to rename files!
+All file names should be informative. `git mv` can also be used to rename files!
 
-[lindsy example stuff]
-- also `git mv` !
+Syntax:
+> `git mv <oldfilename> <newfilename>`
 
+Example:
+> 
 
 To recap, we used the following code for these changes:
-[image of whole  code terminal]
 
-
-[Lindsey add post pics for each update]
-
-Clone the messy repo to your local machine and see if you can replicate these changes using github and the terminal
+[insert image of whole terminal process here]
 
