@@ -1,4 +1,4 @@
-# Repository Update - Exercises
+# Repository Organization - Exercises
 
 ## Introduction
 
