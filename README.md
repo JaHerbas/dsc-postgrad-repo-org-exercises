@@ -1,4 +1,4 @@
-# Repository Update - Codealong
+# Repository Update - Exercises
 
 ## Introduction
 
