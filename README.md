@@ -32,7 +32,7 @@ There are two ways to change the name of a GitHub repository. It can be done [th
 
 This example shows using the repository on GitHub:
 
-![changing repository name](images/change-repo-name.png)
+<img src="images/change-repo-name.png" width="850"/>
 
 - go to the Settings tab of the GitHub repository for your project
 - change the name to something more descriptive and click `Rename`
@@ -82,7 +82,8 @@ GitHub provides [many sample `gitignore` templates](https://github.com/github/gi
   - `.py` files containing API keys
 
 Example:
-![screenshot of a gitignore](images/example-gitignore.png)
+
+<img src="images/example-gitignore.png" width="850"/>
 
 Once you've added a `gitignore` to your repository, you can add/commit/push your changes to see how this affects both your local and remote repositories.
 
@@ -150,9 +151,8 @@ Example:
 
 In the end, your repository should look like this:
 
-![polished repository example](images/PolishedRepo.png)
+<img src="images/PolishedRepo.png"/>
 
 To recap, we used the following terminal commands for these changes:
 
-![image showcasing the whole terminal process](images/all-terminal-commands.png)
-
+<img src="images/all-terminal-commands.png"/>
