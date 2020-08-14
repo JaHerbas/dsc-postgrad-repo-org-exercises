@@ -32,7 +32,7 @@ There are two ways to change the name of a GitHub repository. It can be done [th
 
 This example shows using the repository on GitHub:
 
-<img src="images/change-repo-name.png" width="850"/>
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/change-repo-name.png">
 
 - go to the Settings tab of the GitHub repository for your project
 - change the name to something more descriptive and click `Rename`
@@ -52,6 +52,7 @@ Syntax:
 `git remote set-url origin <new repo url>`
 
 ## Add `gitignore`
+
 The [`gitignore`](https://git-scm.com/docs/gitignore) file tells Git which files to "ignore" and not track. Each line in a `gitignore` list the string pattern in your directories that Git should not track. Many hidden system files, caches, and output directories do not need to be tracked for a project or could cause problems on another person's system if they were to clone and pull your system files to their computer. 
 
 GitHub provides [many sample `gitignore` templates](https://github.com/github/gitignore) based on the languages or tools of your project. GitHub's [Python `gitignore`](https://github.com/github/gitignore/blob/master/Python.gitignore) template is the best choice for most Flatiron School data science projects. If a specific file or directory type is not listed in a `gitignore` template it is not a problem - for example, if you are using a Mac, you may want to add the `.DS_Store` hidden file (which tracks folder attributes for your local directory) to your `gitignore`. `gitignore` files can be updated through any text editor or edited on GitHub. The steps below walk through creating a `gitignore` file from scratch, using the Python `gitignore` template, and adding specifications to the file. 
@@ -83,7 +84,7 @@ GitHub provides [many sample `gitignore` templates](https://github.com/github/gi
 
 Example:
 
-<img src="images/example-gitignore.png" width="850"/>
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/example-gitignore.png">
 
 Once you've added a `gitignore` to your repository, you can add/commit/push your changes to see how this affects both your local and remote repositories.
 
@@ -151,8 +152,8 @@ Example:
 
 In the end, your repository should look like this:
 
-<img src="images/PolishedRepo.png"/>
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/PolishedRepo.png">
 
 To recap, we used the following terminal commands for these changes:
 
-<img src="images/all-terminal-commands.png"/>
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/all-terminal-commands.png">
