@@ -32,7 +32,7 @@ There are two ways to change the name of a GitHub repository. It can be done [th
 
 This example shows using the repository on GitHub:
 
-<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/change-repo-name.png">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/change-repo-name.png">
 
 - go to the Settings tab of the GitHub repository for your project
 - change the name to something more descriptive and click `Rename`
@@ -84,7 +84,7 @@ GitHub provides [many sample `gitignore` templates](https://github.com/github/gi
 
 Example:
 
-<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/example-gitignore.png">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/example-gitignore.png">
 
 Once you've added a `gitignore` to your repository, you can add/commit/push your changes to see how this affects both your local and remote repositories.
 
@@ -152,8 +152,8 @@ Example:
 
 In the end, your repository should look like this:
 
-<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/PolishedRepo.png">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/PolishedRepo.png">
 
 To recap, we used the following terminal commands for these changes:
 
-<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/images/all-terminal-commands.png">
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-postgrad-repo-org-exercises/master/all-terminal-commands.png">
